@@ -1,0 +1,68 @@
+.red{
+    background-color: #bf404a;
+    border-color: #bf404a;
+}
+
+/*general class*/
+
+#pokedexPicture{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+/*properties for the top left pokedex*/
+
+.leftPartPokedex{
+    border-radius: 5px 5px 0px 5px;
+    width: 350px;
+    height:450px;
+}
+
+.topLeftPokedex {
+    filter: drop-shadow(15px 15px 5px rgba(0, 0, 0, 0.5));/*TODO change it and make an acceptable drop-shadow*/
+}
+
+.topLeftPokedex>div:nth-child(1){
+    width:350px;
+    height: 50px;
+    border-radius:5px 5px 5px 0;
+}
+
+.topLeftPokedex>div:nth-child(2){
+    width:170px;
+    height:0;
+    border-top:solid #bf404a 40px;
+    border-right: solid transparent 25px;
+}
+
+.topLeftPokedex>div:nth-child(3){
+    display: flex;
+    flex-direction:row;
+}
+
+.topLeftPokedex>div:nth-child(3)>*{
+    margin-top:-5px;
+}
+
+.topLeftPokedex>div:nth-child(3)>div:nth-child(1){
+    width:160px;
+    height: 10px;
+    border-bottom-left-radius:5px;
+}
+
+.topLeftPokedex>div:nth-child(3)>div:nth-child(2){
+    width:11px;
+    height:10px;
+    border-bottom-right-radius:100%;
+}
+
+/*END of properties for top left pokedex*/
+
+/*END OF PROPETIES FOR LEFT PART OF THE POKEDEX!*/
+
+.rightPartPokedex{
+    border-radius: 5px;
+    width:350px;
+    height:400px;
+}
