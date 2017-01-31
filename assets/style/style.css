@@ -17,10 +17,13 @@
     border-radius: 5px 5px 0px 5px;
     width: 350px;
     height:450px;
+    display: flex;
+    flex-direction: row;
 }
 
 .topLeftPokedex {
-    filter: drop-shadow(15px 15px 5px rgba(0, 0, 0, 0.5));/*TODO change it and make an acceptable drop-shadow*/
+    filter: drop-shadow(15px 15px 5px rgba(0, 0, 0, 0.5));
+    position: absolute;
 }
 
 .topLeftPokedex>div:nth-child(1){
@@ -134,6 +137,44 @@
 }
 
 /*END of properties for top left pokedex*/
+
+.leftPartPokedex>div:nth-child(2){
+    width:280px;
+}
+
+/*properties for column of leftPartPokedex*/
+
+.leftPartPokedex>.column{
+    height:100%;
+    flex-grow: 1;
+    border-left: #963941 2px solid;
+    border-right:#963941 2px solid;
+    background: linear-gradient(to right,#bf404a, #c76068,#bf404a);
+    border-top-right-radius:5px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+.leftPartPokedex>.column>div>hr:nth-child(1){
+    margin-bottom: 20px;
+}
+
+.leftPartPokedex>.column>div>hr{
+    height:1px;
+    background-color: #c65761;
+    border: #c65761 1px solid;
+}
+
+.leftPartPokedex>.column>div:nth-child(1){
+    margin-top: 80px;
+}
+
+.leftPartPokedex>.column>div:nth-child(2){
+    margin-bottom:35px;
+}
+
+/*end of properties for column of left pokedex*/
 
 /*properties for screen of leftPartPokedex*/
 .leftPartPokedex .outerScreen{
