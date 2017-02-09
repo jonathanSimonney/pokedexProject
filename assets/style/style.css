@@ -3,12 +3,18 @@
     border-color: #bf404a;
 }
 
+.errorMessage{
+    color: red;
+    font-weight: bold;
+}
+
 /*general class*/
 
 #searchForm{
     display: flex;
-    justify-content: center;
+    align-items: center;
     width:100%;
+    flex-direction: column;
 }
 
 #pokedexPicture{

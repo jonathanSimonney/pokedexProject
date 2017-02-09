@@ -4,17 +4,21 @@
         <meta charset="utf-8">
         <title>pokedex</title>
         <meta name="author" content="Jonathan">
+        <meta name="viewport">
         <link type="text/css" rel="stylesheet" href="assets/style/style.css">
+        <script src="assets/script.js"></script>
     </head>
 
     <body>
         <div id="searchForm">
-            <form>
+            <form name="searchPokemon">
                 <fieldset>
-                    <input type="text" placeholder="enter the name or the number of your pokemon">
+                    <input type="text" placeholder="enter the name or the number of your pokemon" name="pokeInfo">
                     <input type="submit" value="search that pokemon">
                 </fieldset>
             </form>
+
+            <span class="errorMessage"></span>
         </div>
 
         <div id="pokedexPicture">
