@@ -5,6 +5,12 @@
 
 /*general class*/
 
+#searchForm{
+    display: flex;
+    justify-content: center;
+    width:100%;
+}
+
 #pokedexPicture{
     display: flex;
     flex-direction: row;
@@ -22,7 +28,7 @@
 }
 
 .topLeftPokedex {
-    filter: drop-shadow(15px 15px 5px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(15px 15px 5px rgba(0, 0, 0, 0.3));
     position: absolute;
 }
 
@@ -140,6 +146,10 @@
 
 .leftPartPokedex>div:nth-child(2){
     width:280px;
+    display: flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    align-items:center;
 }
 
 /*properties for column of leftPartPokedex*/
@@ -182,6 +192,13 @@
     width: 200px;
     height:210px;
     border-radius: 10px 10px 10px 50px;
+}
+
+/*end of properties for the screen of left part pokedex*/
+
+.leftPartPokedex>div:nth-child(2)>.buttons{
+    height:90px;
+    margin-bottom:10px;
 }
 
 /*END OF PROPERTIES FOR LEFT PART OF THE POKEDEX!*/
