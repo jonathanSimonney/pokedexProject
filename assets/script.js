@@ -9,7 +9,7 @@ window.onload = function () {
     }
 
     document.forms["searchPokemon"].onsubmit = function () {
-        var userInput = this.pokeInfo.value.capitalizeFirstLetter()
+        var userInput = this.pokeInfo.value.capitalizeFirstLetter();
         showPokemon(userInput);
         return false;
     }

@@ -60,11 +60,21 @@
 
 /*general class*/
 
+body{
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+}
+
 #searchForm{
     display: flex;
     align-items: center;
     width:100%;
     flex-direction: column;
+}
+
+.errorMessage{
+    min-height:30px;
 }
 
 #pokedexPicture{
@@ -90,11 +100,13 @@
     height:450px;
     display: flex;
     flex-direction: row;
+    position: relative;
 }
 
 .topLeftPokedex {
     filter: drop-shadow(15px 15px 5px rgba(0, 0, 0, 0.3));
     position: absolute;
+    z-index:100;
 }
 
 .topLeftPokedex>div:nth-child(1){
@@ -572,4 +584,40 @@
     border:2px #5d516d solid;
     border-radius: 5px;
     margin-right:10px;
+}
+
+/*end of properties of rightPartPokedex*/
+
+.closedPokedexPicture{
+    position: absolute;
+    width:100%;
+    height:100%;
+    display: none;
+    z-index: 50;
+    align-items:center;
+    justify-content: center;
+}
+
+.closedPokedexPicture span{
+    font-weight:bold;
+    font-size: 25px;
+    color: #6e0404;
+}
+
+@media (max-width: 770px) {
+    .rightPartPokedex{
+        display: none;
+    }
+    
+    #searchForm{
+        display: none;
+    }
+
+    .closedPokedexPicture{
+        display: flex;
+    }
+
+    .topLeftPokedex {
+        filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3));
+    }
 }
