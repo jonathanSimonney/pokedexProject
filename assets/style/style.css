@@ -8,6 +8,51 @@
     font-weight: bold;
 }
 
+.greyBorder{
+    border:solid 2px #60494a;
+}
+
+.blackRadient{
+    background : linear-gradient(to bottom, #000, #545454);
+}
+
+.greenRadient{
+    background : linear-gradient(to bottom, #016a38, #117a49);
+    border:solid 2px #4d5940;
+}
+
+.topTriangle{
+    width:0;
+    height:0;
+    border-bottom: 7px solid black;
+    border-right: transparent solid 7px;
+    border-left: transparent solid 7px;
+}
+
+.rightTriangle{
+    width:0;
+    height:0;
+    border-left: 7px solid black;
+    border-top: transparent solid 7px;
+    border-bottom: transparent solid 7px;
+}
+
+.leftTriangle{
+    width:0;
+    height:0;
+    border-right: 7px solid black;
+    border-top: transparent solid 7px;
+    border-bottom: transparent solid 7px;
+}
+
+.bottomTriangle{
+    width:0;
+    height:0;
+    border-top: 7px solid black;
+    border-right: transparent solid 7px;
+    border-left: transparent solid 7px;
+}
+
 /*general class*/
 
 #searchForm{
@@ -262,9 +307,154 @@
 }
 /*end of properties for the screen of left part pokedex*/
 
+/*Beginning of properties for buttons of left part pokedex*/
+
 .leftPartPokedex>div:nth-child(2)>.buttons{
+    margin-top:5px;
+    width: 220px;
     height:90px;
     margin-bottom:10px;
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+
+.leftPartPokedex .buttons>.circle{
+    margin-top:10px;
+    width:20px;
+    height:20px;
+}
+
+.leftPartPokedex .buttons>div:nth-child(2){
+    width:75px;
+    height:100%;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    align-content:space-between;
+    justify-content:space-between;
+}
+
+.leftPartPokedex .buttons>div:nth-child(2)>div:nth-child(1){
+    width:35px;
+    height:5px;
+    background-color: #a7d135;
+    border-radius: 4px;
+}
+
+.leftPartPokedex .buttons>div:nth-child(2)>div:nth-child(2){
+    width:35px;
+    height:5px;
+    background-color: #b30048;
+    border-radius: 4px;
+}
+
+.leftPartPokedex .buttons>div:nth-child(2)>div:nth-child(3){
+    width:100%;
+    height:30px;
+    margin-bottom:15px;
+    border-radius: 3px;
+}
+
+/*begin of cross properties*/
+.cross{
+    height: 80px;
+    width: 90px;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    align-content:stretch;
+    justify-content:center;
+    align-items:stretch;
+    position: relative;
+}
+
+.cross>div:nth-child(1){
+    width:20px;
+    height:40px;
+    display: flex;
+    justify-content: center;
+    margin-bottom:-10px;
+    border-top: solid 2px #60494a;
+}
+
+.cross>div:nth-child(1)>div{
+    margin-top:5px;
+}
+
+.cross>div:nth-child(2){
+    display: flex;
+    flex-direction:row;
+    width:100%;
+    height:20px;
+    justify-content:space-between;
+    align-items:center;
+    border-right:solid 2px #60494a;
+    border-left:solid 2px #60494a;
+}
+
+.cross>div:nth-child(2)>div:nth-child(1){
+    margin-left:5px;
+}
+
+.cross .circle{
+    margin-top:-3px;
+    width:20px;
+    height:20px;
+    z-index: 1;
+}
+
+.cross>div:nth-child(2)>div:nth-child(3){
+    margin-right:5px;
+}
+
+.cross>div:nth-child(3){
+    margin-top:-11px;
+    width:20px;
+    height:40px;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    border-bottom:solid 2px #60494a;
+}
+
+.cross>div:nth-child(3)>div{
+    margin-bottom:5px;
+}
+
+.cross>div:nth-child(4), .cross>div:nth-child(5), .cross>div:nth-child(6), .cross>div:nth-child(7){
+    background-color: #bf404a;
+    width:35px;
+    height:30px;
+    position: absolute;
+}
+
+.cross>div:nth-child(4){
+    top:0;
+    left:0;
+    border-right:solid 2px #60494a;
+    border-bottom:solid 2px #60494a;
+ }
+
+.cross>div:nth-child(5){
+    top:0;
+    right:0;
+    border-left:solid 2px #60494a;
+    border-bottom:solid 2px #60494a;
+}
+
+.cross>div:nth-child(6){
+    bottom:0;
+    left:0;
+    border-right:solid 2px #60494a;
+    border-top:solid 2px #60494a;
+}
+
+.cross>div:nth-child(7){
+    bottom:0;
+    right:0;
+    border-left:solid 2px #60494a;
+    border-top:solid 2px #60494a;
 }
 
 /*END OF PROPERTIES FOR LEFT PART OF THE POKEDEX!*/
