@@ -2,6 +2,10 @@ String.prototype.capitalizeFirstLetter = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
 }
 
+String.prototype.minimalizeFirstLetter = function() {
+    return this.charAt(0).toLowerCase() + this.slice(1);
+}
+
 function getPokemonList(){
     var ret ='';
     var request = new XMLHttpRequest();
@@ -20,7 +24,6 @@ function searchId(what, where, how){
     }else{
         ret = where.indexOf(what);
     }
-
     return parseInt(ret)+1;//Because JSON begins at 1, and array at 0
 }
 
@@ -49,7 +52,40 @@ function showErrorMessage(userInput){
     }
     errorMessage += " not found";
 
+    if (userInput === ""){
+        errorMessage = "You must enter a pokemon name or a pokemon id";
+    }
+
     document.querySelector(".errorMessage").innerHTML = errorMessage;
+}
+
+function format(pokemonName, userInput){
+    pokemonName = pokemonName.minimalizeFirstLetter();
+    if (pokemonName === 'nidoran'){
+        console.log(userInput);
+        if (userInput == 28){
+            pokemonName = 'nidoran-f';
+        }else if(userInput == 31){
+            pokemonName = 'nidoran-m';
+        }else{
+            pokemonName = 'nidoran-f';
+        }
+    }else if (pokemonName === 'mr. mime'){
+        pokemonName = 'mr-mime';
+    }else if (pokemonName === 'farfetch\'d'){
+        pokemonName = 'farfetchd';
+    }
+
+    return pokemonName;
+}
+
+function addImage(pokemonName, userInput) {
+    var imgToAdd = document.createElement('img');
+    document.getElementById('displayImage').innerHTML = '';
+    imgToAdd.alt = 'Picture of '+pokemonName;
+    imgToAdd.src = 'http://img.pokemondb.net/artwork/'+format(pokemonName, userInput)+'.jpg';
+    console.log(imgToAdd);
+    document.getElementById('displayImage').appendChild(imgToAdd);
 }
 
 function showPokemon(userInput) {
@@ -57,7 +93,9 @@ function showPokemon(userInput) {
     if (pokemonToShow === undefined){
         showErrorMessage(userInput);
     }else{
-        //TODO do this function once div are in place...
+        document.getElementById('name').innerHTML = 'Name : '+pokemonToShow['name'];
+        document.getElementById('type').innerHTML = 'Type : '+pokemonToShow['type'];
+        addImage(pokemonToShow['name'], userInput);
     }
     console.log(pokemonToShow);
 }
