@@ -93,6 +93,7 @@ function showPokemon(userInput) {
     if (pokemonToShow === undefined){
         showErrorMessage(userInput);
     }else{
+        document.querySelector(".errorMessage").innerHTML = "";
         document.getElementById('name').innerHTML = 'Name : '+pokemonToShow['name'];
         document.getElementById('type').innerHTML = 'Type : '+pokemonToShow['type'];
         addImage(pokemonToShow['name'], userInput);

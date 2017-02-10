@@ -554,3 +554,22 @@
     width:auto;
     height: 10px;
 }
+
+.rightPartPokedex>div:nth-child(3){
+    margin-top:30px;
+    height:85px;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    align-content:space-between;
+    justify-content: space-between;
+}
+
+.rightPartPokedex>div:nth-child(3)>div{
+    width:45px;
+    height:35px;
+    background: linear-gradient(to bottom, #4d8fba, #76a3c0);
+    border:2px #5d516d solid;
+    border-radius: 5px;
+    margin-right:10px;
+}
