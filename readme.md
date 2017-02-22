@@ -1,0 +1,1 @@
+Pokedex with data fetching from a JSON. Made with HTML/CSS/JS only.
